@@ -1,8 +1,25 @@
-import React from 'react'
-import { words } from '../constants'
-import Button from '../components/Button'
+import React from 'react';
+import { words } from '../constants';
+import Button from '../components/Button';
+import HeroExperience from '../components/HeroModels/HeroExperience';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const Hero = () => {
+    useGSAP(() => {
+        gsap.fromTo('.hero-text h1', {
+            y: 50,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.2,
+            ease: 'power2.out',
+            delay: 0.5
+        })
+    })
   return (
     <section id="hero" className="relative overflow-hidden">
     {/* Background Image */}
@@ -40,12 +57,17 @@ const Hero = () => {
               <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
                 Hi, I'm Priscilla, a developer based in Brazil with a passion for code.
               </p>
-              <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work" />
             </div>
+              <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work" />
             </div>
         </header>
 
         {/* Right: 3d model */}
+        <figure>
+            <div className="hero-3d-layout border-red-200 border-2">
+                <HeroExperience />
+            </div>
+        </figure>
         </div>
     </section>
   )
