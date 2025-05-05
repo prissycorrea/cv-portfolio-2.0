@@ -65,11 +65,12 @@ const Hero = () => {
 
         {/* Right: 3d model */}
         <figure>
-            <div className="hero-3d-layout border-red-200 border-2">
+            <div className="hero-3d-layout">
                 <HeroExperience />
             </div>
         </figure>
         </div>
+        <AnimatedCounter />
     </section>
   )
 }
