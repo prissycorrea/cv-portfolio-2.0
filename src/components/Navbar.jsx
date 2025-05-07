@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-
+import { useTranslation } from 'react-i18next';
 import { navLinks } from "../constants";
+import LanguageToggle from "./LanguageToggle";
 
 const NavBar = () => {
+  const { t } = useTranslation();
   // track if the user has scrolled down the page
   const [scrolled, setScrolled] = useState(false);
 
@@ -26,7 +28,7 @@ const NavBar = () => {
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
         <a href="#hero" className="logo">
-          Priscilla | FrontEnd Dev
+          {t('nav.title')}
         </a>
 
         <nav className="desktop">
@@ -34,19 +36,19 @@ const NavBar = () => {
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group">
                 <a href={link}>
-                  <span>{name}</span>
+                  <span>{t(`nav.${name.toLowerCase()}`)}</span>
                   <span className="underline" />
                 </a>
               </li>
             ))}
           </ul>
+          <a href="#contact" className="contact-btn group ml-5">
+            <div className="inner">
+              <span>{t('nav.contact')}</span>
+            </div>
+          </a>
         </nav>
-
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact me</span>
-          </div>
-        </a>
+        <LanguageToggle />
       </div>
     </header>
   );

@@ -1,11 +1,14 @@
 import { socialImgs } from "../constants";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
-          <p>Terms & Conditions</p>
+          <p>{t('footer.left')}</p>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
@@ -16,7 +19,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center md:text-end">
-            © {new Date().getFullYear()} Priscilla Correa. All rights reserved.
+          {t('footer.right').replace('{year}', year)}
           </p>
         </div>
       </div>

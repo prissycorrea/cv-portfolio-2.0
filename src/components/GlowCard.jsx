@@ -1,6 +1,9 @@
 import { useRef } from "react";
+import { useTranslation } from 'react-i18next';
 
-const GlowCard = ({ card, index, children }) => {
+const GlowCard = ({ card, index, context, children }) => {
+  const { t } = useTranslation();
+
   // refs for all the cards
   const cardRefs = useRef([]);
 
@@ -39,7 +42,11 @@ const GlowCard = ({ card, index, children }) => {
         ))}
       </div>
       <div className="mb-5">
-        <p className="text-white-50 text-lg">{card.review}</p>
+        <p className="text-white-50 text-lg">
+          {context === 'experience' 
+            ? t(`experience.experience0${index + 1}.review`, card.review)
+            : t(`testimonials.testimonial0${index + 1}.review`, card.review)}
+        </p>
       </div>
       {children}
     </div>

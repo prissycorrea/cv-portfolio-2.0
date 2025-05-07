@@ -4,8 +4,10 @@ import gsap from "gsap";
 import TitleHeader from "../components/TitleHeader";
 import TechIcon from "../components/Models/TechLogos/TechIcon";
 import { techStackIcons } from "../constants";
+import { useTranslation } from 'react-i18next';
 
 const TechStack = () => {
+  const { t } = useTranslation();
   // Animate the tech cards in the skills section
   useGSAP(() => {
     // This animation is triggered when the user scrolls to the #skills wrapper
@@ -33,18 +35,18 @@ const TechStack = () => {
       }
     );
   });
-
+  const stackKeys = ["stack01", "stack02", "stack03", "stack04", "stack05"];
   return (
     <div id="skills" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="How I Can Contribute & My Key Skills"
-          sub="🤝 What I Bring to the Table"
+          title={t('techStack.title')}
+          sub={t('techStack.subtitle')}
         />
         <div className="tech-grid">
-          {techStackIcons.map((techStackIcon) => (
+          {techStackIcons.map((techStackIcon, index) => (
             <div
-              key={techStackIcon.name}
+              key={index}
               className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
             >
               <div className="tech-card-animated-bg" />
@@ -53,17 +55,16 @@ const TechStack = () => {
                   <TechIcon model={techStackIcon} />
                 </div>
                 <div className="padding-x w-full">
-                  <p>{techStackIcon.name}</p>
+                  <p>{t(`techStack.${stackKeys[index]}.name`)}</p>
                 </div>
               </div>
             </div>
           ))}
-
-
         </div>
       </div>
     </div>
   );
 };
+
 
 export default TechStack;

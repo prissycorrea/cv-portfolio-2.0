@@ -5,8 +5,10 @@ import HeroExperience from '../components/HeroModels/HeroExperience';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import AnimatedCounter from '../components/AnimatedCounter';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
     useGSAP(() => {
         gsap.fromTo('.hero-text h1', {
             y: 50,
@@ -34,7 +36,7 @@ const Hero = () => {
           <div className="flex flex-col gap-7">
             <div className="hero-text">
               <h1>
-                Shaping
+              {t('hero.text-before')}
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
@@ -53,13 +55,13 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <h1>{t('hero.text-after1')}</h1>
+              <h1>{t('hero.text-after2')}</h1>
               <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                Hi, I'm Priscilla, a developer based in Brazil with a passion for code.
+                {t('hero.about')}
               </p>
             </div>
-              <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work" />
+              <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text={t('hero.button-text')} />
             </div>
         </header>
 

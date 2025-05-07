@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "title": "Priscilla | FrontEnd Dev",
+    "work": "Trabalho",
+    "experience": "Experiência",
+    "skills": "Habilidades",
+    "testimonials": "Depoimentos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "about": "Oi, eu sou a Priscilla, desenvolvedora front-end apaixonada por tecnologia.",
+    "text-before": "Moldando",
+    "text-after1": "em projetos reais",
+    "text-after2": "que geram resultados",
+    "words": {
+      "ideas": "Ideas",
+      "concepts": "Concepts",
+      "designs": "Designs",
+      "code": "Code"
+    },
+    "button-text": "Veja meu trabalho"
+  },
+  "counter": {
+    "years": "Anos de experiência",
+    "clients": "Clientes satisfeitos",
+    "projects": "Projetos",
+    "retention": "Taxa de retenção"
+  },
+
+  "showcase": {
+    "project01": {
+        "title": "Viagens sob demanda simplificadas com um aplicativo poderoso e fácil de usar chamado Ryde",
+        "description": "Um aplicativo criado com React Native, Expo e TailwindCSS para uma experiência rápida e fácil de usar.",
+        "imgPath": "/images/project01.png",
+        "alt": ""
+    },
+    "project02": {
+        "title": "Plataforma de gerenciamento de biblioteca",
+        "imgPath": "/images/project02.png",
+        "alt": ""
+    },
+    "project03": {
+        "title": "YC Directory - Um aplicativo de demonstração de startups",
+        "imgPath": "/images/project03.png",
+        "alt": ""
+    }
+  },
+
+  "techStack": {
+    "title": "Como posso contribuir e minhas principais habilidades",
+    "subtitle": "🤝 O que eu trago para a mesa",
+    "stack01": {
+      "name": "Desenvolvimento React" 
+    },
+    "stack02": {
+      "name": "Desenvolvimento Python" 
+    },
+    "stack03": {
+      "name": "Desenvolvimento Backend" 
+    },
+    "stack04": {
+      "name": "Desenvolvimento Interativo" 
+    },
+    "stack05": {
+      "name": "Gerenciamento de projetos" 
+    }
+  },
+
+  "experience": {
+    "title": "Experiência Profissional",
+    "subtitle": "💼 Visão geral da minha carreira",
+    "description": "Responsabilidades",
+    "experience01": {
+        "title": "Desenvolvedora Frontend",
+        "date": "Janeiro 2023 - Atualmente",
+        "responsibilities": [
+          "Desenvolveu e manteve recursos voltados para o usuário no site da Hostinger.",
+          "Colaborou estreitamente com designers de UI/UX para garantir experiências perfeitas para o usuário.",
+          "Otimizou aplicativos web para máxima velocidade e escalabilidade."
+        ],
+        "review": "Priscilla trouxe criatividade e expertise técnica para a equipe, melhorando significativamente o desempenho do nosso front-end. Seu trabalho foi inestimável para proporcionar experiências mais rápidas."
+    },
+    "experience02": {
+        "title": "Desenvolvedora Full Stack",
+        "date": "Junho 2020 - Dezembro 2023",
+        "responsibilities": [
+          "Liderou o desenvolvimento de aplicativos web do Docker, com foco em escalabilidade.",
+          "Trabalhou com engenheiros de backend para integrar APIs perfeitamente com o frontend.",
+          "Contribuiu para projetos de código aberto que foram usados ​​com o ecossistema Docker."
+        ],
+        "review": "As contribuições de Priscilla para os aplicativos web do Docker foram extraordinárias. Ele aborda os desafios com uma mentalidade de resolução de problemas."
+    },
+    "experience03": {
+        "title": "Desenvolvedora React Native",
+        "date": "Março 2019 - Maio 2020",
+        "responsibilities": [
+          "Criação de aplicativos móveis multiplataforma usando React Native, integrando-os aos serviços de backend da Appwrite",
+          "Melhoria no desempenho do aplicativo e na experiência do usuário por meio da otimização e testes de código",
+          "Coordenação com a equipe de produto para implementar recursos com base no feedback."
+        ],
+        "review": "O trabalho de Priscilla no aplicativo móvel da Appwrite trouxe um alto nível de qualidade e eficiência. Ele entregou soluções que aprimoraram nossa experiência móvel e atenderam aos nossos objetivos de produto."
+    }
+  },
+  "testimonials": {
+    "title": "O que dizem sobre mim?",
+    "subtitle": "⭐️ Destaques de feedback de clientes",
+    "testimonial01": {
+      "name": "Esther Howard",
+      "mentions": "@estherhoward",
+      "review": "Não posso dizer coisas boas o suficiente sobre a Priscilla. Ela conseguiu pegar nossos requisitos complexos de projeto e transformá-los em um site funcional e fluido. Suas habilidades de resolução de problemas são excepcionais."
+    },
+    "testimonial02": {
+      "name": "Wade Warren",
+      "mentions": "@wadewarren",
+      "review": "Trabalhar com a Priscilla foi uma experiência fantástica. Ela transformou nosso site desatualizado em uma plataforma moderna e amigável. Sua atenção aos detalhes e compromisso com a qualidade são incomparáveis. Recomendo fortemente para qualquer projeto de desenvolvimento web."
+    },
+    "testimonial03": {
+      "name": "Guy Hawkins",
+      "mentions": "@guyhawkins",
+      "review": "Colaborar com a Priscilla foi um prazer absoluto. Seu profissionalismo, pontualidade e dedicação em entregar resultados excepcionais foram evidentes durante todo o projeto. O entusiasmo da Priscilla por cada aspecto do desenvolvimento realmente se destaca. Se você quer elevar seu site e sua marca, a Priscilla é a parceira ideal."
+    },
+    "testimonial04": {
+      "name": "Marvin McKinney",
+      "mentions": "@marvinmckinney",
+      "review": "Foi um prazer trabalhar com a Priscilla. Ela transformou nosso site desatualizado em uma plataforma moderna e intuitiva, fácil de navegar. Um trabalho fantástico no geral."
+    },
+    "testimonial05": {
+      "name": "Floyd Miles",
+      "mentions": "@floydmiles",
+      "review": "A expertise da Priscilla em desenvolvimento web é realmente impressionante. Ela entregou uma solução robusta e escalável para nosso site de e-commerce, e nossas vendas online aumentaram significativamente desde o lançamento. Uma verdadeira profissional!"
+    },
+    "testimonial06": {
+      "name": "Albert Flores",
+      "mentions": "@albertflores",
+      "review": "Foi um prazer trabalhar com a Priscilla. Ela entendeu perfeitamente nossos requisitos e entregou um site que superou nossas expectativas. Suas habilidades tanto em frontend quanto backend são de alto nível."
+    }
+  },
+
+  "abilities": {
+    "quality": {
+      "title": "Foco na Qualidade",
+      "desc": "Entregando resultados de alta qualidade com atenção aos detalhes."
+    },
+    "communication": {
+      "title": "Comunicação Confiável",
+      "desc": "Mantendo você atualizado em cada etapa para garantir transparência e clareza."
+    },
+    "delivery": {
+      "title": "Entrega Pontual",
+      "desc": "Garantindo que os projetos sejam concluídos no prazo, com qualidade e atenção aos detalhes."
+    },
+    "contact": {
+      "title": "Entre em Contato – Vamos Conectar"
+    }
+  },
+  "contact": {
+    "title": "Entre em contato – Vamos nos conectar",
+    "subtitle": "💬 Tem dúvidas ou ideias? Vamos conversar! 🚀",
+    "form": {
+      "name": "Seu nome",
+      "namePlaceholder": "Qual é o seu nome?",
+      "email": "Seu E-mail",
+      "emailPlaceholder": "Qual é o seu endereço de e-mail?",
+      "message": "Sua mensagem",
+      "messagePlaceholder": "Como posso te ajudar?"
+    },
+      "button": "Enviar mensagem",
+      "buttonLoading": "Enviando mensagem..."
+  },
+  "footer": {
+    "left": "Termos & Condições",
+    "right": "© {year} Priscilla Correa. Todos os direitos reservados."
+  }
+}

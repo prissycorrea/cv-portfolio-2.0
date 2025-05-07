@@ -2,10 +2,15 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useTranslation } from 'react-i18next';
+import useContent from '../constants/useContent';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AppShowcase = () => {
+const ShowcaseSection = () => {
+  const { t } = useTranslation();
+  const { showcaseProjects } = useContent();
+
   const sectionRef = useRef(null);
   const rydeRef = useRef(null);
   const libraryRef = useRef(null);
@@ -49,16 +54,14 @@ const AppShowcase = () => {
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper">
-              <img src="./images/project1.png" alt="Ryde App Interface" />
+              <img src={showcaseProjects[0].imgPath} alt={showcaseProjects[0].alt} />
             </div>
             <div className="text-content">
               <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
+                {t('showcase.project01.title')}
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+              {t('showcase.project01.description')}
               </p>
             </div>
           </div>
@@ -66,19 +69,16 @@ const AppShowcase = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
-                <img
-                  src="./images/project2.png"
-                  alt="Library Management Platform"
-                />
+                <img src={showcaseProjects[1].imgPath} alt={showcaseProjects[1].alt} />
               </div>
-              <h2>The Library Management Platform</h2>
+              <h2>{t('showcase.project02.title')}</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+              <img src={showcaseProjects[2].imgPath} alt={showcaseProjects[2].alt} />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>{t('showcase.project03.title')}</h2>
             </div>
           </div>
         </div>
@@ -87,4 +87,4 @@ const AppShowcase = () => {
   );
 };
 
-export default AppShowcase;
+export default ShowcaseSection;

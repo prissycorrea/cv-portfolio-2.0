@@ -1,14 +1,15 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { expCards } from "../constants";
 import TitleHeader from "../components/TitleHeader";
 import GlowCard from "../components/GlowCard";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ExperienceSection = () => {
+  const { t } = useTranslation();
   useGSAP(() => {
     // Loop through each timeline card and animate them in
     // as the user scrolls to each card
@@ -96,15 +97,15 @@ const ExperienceSection = () => {
     >
       <div className="w-full h-full md:px-20 px-5">
         <TitleHeader
-          title="Professional Work Experience"
-          sub="💼 My Career Overview"
+          title={t("experience.title")}
+          sub={t("experience.subtitle")}
         />
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
-            {expCards.map((card) => (
+            {expCards.map((card, index) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
-                  <GlowCard card={card}>
+                  <GlowCard key={index} card={card} index={index} context="experience">
                     <div>
                       <img src={card.imgPath} alt="exp-img" />
                     </div>
@@ -121,21 +122,25 @@ const ExperienceSection = () => {
                         <img src={card.logoPath} alt="logo" />
                       </div>
                       <div>
-                        <h1 className="font-semibold text-3xl">{card.title}</h1>
+                        <h1 className="font-semibold text-3xl">
+                          {t(`experience.${card.key}.title`)}
+                        </h1>
                         <p className="my-5 text-white-50">
-                          🗓️&nbsp;{card.date}
+                          🗓️ {t(`experience.${card.key}.date`)}
                         </p>
                         <p className="text-[#839CB5] italic">
-                          Responsibilities
+                          {t(
+                            "experience.description"
+                          )}
                         </p>
                         <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
-                          {card.responsibilities.map(
-                            (responsibility, index) => (
-                              <li key={index} className="text-lg">
-                                {responsibility}
-                              </li>
-                            )
-                          )}
+                          {t(`experience.${card.key}.responsibilities`, {
+                            returnObjects: true,
+                          }).map((responsibility, index) => (
+                            <li key={index} className="text-lg">
+                              {responsibility}
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     </div>
